@@ -1,2 +1,2 @@
 [dev]
-10.0.2.9 ansible_user=puppetnode
+10.0.2.9 ansible_user=mnode
