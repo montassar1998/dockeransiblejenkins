@@ -26,8 +26,8 @@
         enabled: yes
     - name: Start the container
       docker_container:
-        name: montaapp
-        image: "montassardev/montaapp:{{DOCKER_TAG}}"
+        name: montadeployment
+        image: "montassardev/montadeployment:{{DOCKER_TAG}}"
         state: started
         published_ports:
           - 0.0.0.0:8080:8080
