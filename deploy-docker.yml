@@ -19,6 +19,11 @@
       pip:
         name: docker-py
         state: present
+    - name: " Starting and Enabling Docker service"
+      service:
+        name: docker
+        state: started
+        enabled: yes
     - name: Start the container
       docker_container:
         name: montaapp
