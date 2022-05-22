@@ -29,6 +29,7 @@
         name: montadeployment
         image: "https://hub.docker.com/montassardev/montadeployment:{{DOCKER_TAG}}"
         state: started
+        pull: true
         published_ports:
           - 0.0.0.0:8080:8080
     
