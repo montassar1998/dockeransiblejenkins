@@ -8,6 +8,11 @@
       yum:
         name: python-pip
         state: present
+    - name: Install and upgrade pip
+      pip:
+      name: pip
+        extra_args: --upgrade
+        executable: pip3
     - name: "Allow all traffic"
       service:
         name: firewalld
