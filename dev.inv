@@ -1,5 +1,4 @@
 
 [dev]
 10.0.2.9 ansible_user=mnode
-[dev:vars]
-ansible_python_interpreter=/usr/bin/python3
+
