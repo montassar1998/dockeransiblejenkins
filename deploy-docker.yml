@@ -24,9 +24,6 @@
         name: docker
         state: started
         enabled: yes
-    
-
-    
     - name: Start the container
       docker_container:
         name: montadeployment
