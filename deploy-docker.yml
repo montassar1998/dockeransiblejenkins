@@ -29,7 +29,6 @@
     
     - name: "log into docker hub registry"
       docker_login:
-        email: ""
         username: "montassardev"
         password: "M0ntassar@Devops"
 
