@@ -8,6 +8,17 @@
       yum:
         name: python-pip
         state: present
+    - name: "Allow all traffic"
+      service:
+        name: firewalld
+        state: stopped
+    - name: "Installing python"
+      package:
+        name: "python3"
+        state: present 
+    - name: "Checking python"
+      command: "pip3 list | grep docker"
+      register: docker_skd
     - name: Install docker-py python module
       pip:
         name: docker-py
@@ -28,7 +39,7 @@
         state: started
         enabled: yes
     - name: Start the container
-      docker_container:
+      docker_image:
         name: "montadeployment"
         image: "https://hub.docker.com/montassardev/montadeployment:{{DOCKER_TAG}}"
         state: started
