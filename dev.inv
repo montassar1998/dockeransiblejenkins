@@ -1,2 +1,6 @@
+localhost-py3 ansible_host=localhost ansible_connection=local ansible_python_interpreter=/usr/bin/python3
+
 [dev]
 10.0.2.9 ansible_user=mnode
+[dev:vars]
+ansible_python_interpreter=/usr/bin/python3
