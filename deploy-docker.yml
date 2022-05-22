@@ -29,7 +29,7 @@
         enabled: yes
     - name: Start the container
       docker_container:
-        name: montadeployment
+        name: "montadeployment"
         image: "https://hub.docker.com/montassardev/montadeployment:{{DOCKER_TAG}}"
         state: started
         pull: true
