@@ -24,10 +24,23 @@
         name: docker
         state: started
         enabled: yes
-    - name: Start the container
+    
+
+    
+    - name: "log into docker hub registry"
+      docker_login:
+        email: ""
+        username: "montassardev"
+        password: "M0ntassar@Devops"
+
+    - name: "Pull and run the container"
       docker_container:
-        name: montadeployment
-        image: "montassardev/montadeployment:{{DOCKER_TAG}}"
+        name: my_container
         state: started
-        published_ports:
-          - 0.0.0.0:8080:8080
+        image: "montassardev/montadeployment:{{DOCKER_TAG}}"
+        pull: true
+        ports:
+          - "8080:8080"
+    
+    
+
